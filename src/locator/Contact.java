@@ -9,6 +9,8 @@ public class Contact {
 							  LAST_NAME="#GeneralContent_C020_ctl00_ctl00_C020_ctl00_ctl00_textBox_write",
 							  EMAIL="#GeneralContent_C020_ctl00_ctl00_C018_ctl00_ctl00_textBox_write",
 							  COMPANY_NAME="#GeneralContent_C020_ctl00_ctl00_C021_ctl00_ctl00_textBox_write",
-							  PHONE="#GeneralContent_C020_ctl00_ctl00_C024_ctl00_ctl00_textBox_write";
+							  PHONE="#GeneralContent_C020_ctl00_ctl00_C024_ctl00_ctl00_textBox_write",
+							  ERROR_MSG="#GeneralContent_C020_ctl00_ctl00_C021 > div.sfError",
+							  CONTACT_US_BUTTON="#GeneralContent_C020_ctl00_ctl00_C002";
 					           
 }

@@ -3,8 +3,8 @@ package pages;
 import static org.testng.AssertJUnit.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,6 +26,8 @@ public class LoginPage {
 		return this;
 	}
 	public LoginPage enterEmail(String email){
+		JavascriptExecutor jse1 = (JavascriptExecutor)driver;
+		jse1.executeScript("scroll(0, 350)"); // if the element is at bottom.
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(Login.EMAIL)));
 		driver.findElement(By.cssSelector(Login.EMAIL)).clear();
 		driver.findElement(By.cssSelector(Login.EMAIL)).sendKeys(email);
@@ -48,19 +50,14 @@ public class LoginPage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		WebElement btn=driver.findElement(By.cssSelector(Login.LOGINBUTTON));
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		btn.submit();
+		driver.findElement(By.cssSelector(Login.LOGINBUTTON)).click();;
 		return this;
 	}
 	
 	public LoginPage VerifyErrorMessage(String message)
 	{
+		JavascriptExecutor jse1 = (JavascriptExecutor)driver;
+		jse1.executeScript("scroll(0, 350)"); // if the element is at bottom.
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(Login.ERRMSG)));
 		String msg=driver.findElement(By.cssSelector(Login.ERRMSG)).getText();
 		assertEquals("Error message not displayed",msg,message);

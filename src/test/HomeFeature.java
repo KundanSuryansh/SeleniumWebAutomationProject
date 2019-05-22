@@ -5,11 +5,13 @@ import org.testng.annotations.Test;
 
 import configuration.Configuration;
 import data.TestData.DemoPageData;
+import data.TestData.DocsAndSupportData;
 import data.TestData.HomePageData;
 import data.TestData.KendoUiData;
 import data.TestData.UiForWpfData;
 import data.TestData.pricingPageData;
 import pages.DemoPage;
+import pages.DocsAndSupportPage;
 import pages.HomePage;
 import pages.KendoUiPage;
 import pages.PricingPage;
@@ -95,6 +97,22 @@ public class HomeFeature extends Configuration {
 		PricingPage pricingpage=new PricingPage(super.driver,super.wait);
 		home.lanchUrl(HomePageData.URL).verifyTitle(HomePageData.TITLE).pressPricingButton();
 		pricingpage.verifyTitle(pricingPageData.TITLE);
+	}
+	@Test(priority=6)
+	//TC02 :verify that Docs And support page is opening.
+	/*
+	 *Launch URL.
+	 *verify that home is displayed using title of webpage.
+	 *navigate to myproduct button and press it.
+	 *verify the title of docsAndSupport page.
+	 */
+	
+	public void testDocsAndSupportButton()throws Exception
+	{
+		HomePage home =new HomePage(super.driver,super.wait);
+		DocsAndSupportPage docspage=new DocsAndSupportPage(super.driver,super.wait);
+		home.lanchUrl(HomePageData.URL).verifyTitle(HomePageData.TITLE).pressDocsAndSupportButton();
+		docspage.verifyTitle(DocsAndSupportData.TITLE);
 	}
 	
 }

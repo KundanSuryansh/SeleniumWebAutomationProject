@@ -3,6 +3,7 @@ package pages;
 import static org.testng.AssertJUnit.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -141,6 +142,35 @@ public class ContactPage {
 		sleep();
 		return this;
 	}
+	public ContactPage clickOnContactUs()
+	{
+	
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(Contact.CONTACT_US_BUTTON)));
+		JavascriptExecutor jse1 = (JavascriptExecutor)driver;
+		jse1.executeScript("scroll(0, 450)"); // if the element is at bottom.
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.cssSelector(Contact.CONTACT_US_BUTTON)).click();;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return this;
+	}
+	public ContactPage VerfifyErrorMsg(String message)
+	{
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(Contact.ERROR_MSG)));
+		String msg=driver.findElement(By.cssSelector(Contact.ERROR_MSG)).getText();
+		assertEquals("Error message not displayed",msg,message);
+		return this;
+	}
+	
 	public void sleep()
 	{
 		try {

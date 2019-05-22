@@ -79,6 +79,12 @@ public class HomePage {
 		driver.findElement(By.cssSelector(Home.CONTACT)).click();
 		return this;
 	}
+	public HomePage pressDocsAndSupportButton()
+	{
+		sleep();
+		driver.findElement(By.cssSelector(Home.DOCSANDSUPPORT)).click();
+		return this;
+	}
 	public void sleep()
 	{
 		try {

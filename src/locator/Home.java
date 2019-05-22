@@ -9,7 +9,8 @@ public class Home {
 							   DEMOS="#js-tlrk-nav-drawer > ul.TK-Context-Menu.TK-Menu > li:nth-child(1) > a",
 							   PRICING="#js-tlrk-nav-drawer > ul.TK-Context-Menu.TK-Menu > li:nth-child(2) > a",
 							   SEARCH="#js-tlrk-nav-drawer > ul.TK-Aside-Menu > li:nth-child(1) > a > svg",
-							   CONTACT="#js-tlrk-nav-drawer > ul.TK-Aside-Menu > li.TK-Aside-Menu-Item.TK-bn > a";
+							   CONTACT="#js-tlrk-nav-drawer > ul.TK-Aside-Menu > li.TK-Aside-Menu-Item.TK-bn > a",
+							   DOCSANDSUPPORT="#js-tlrk-nav-drawer > ul.TK-Context-Menu.TK-Menu > li:nth-child(4) > a";
 
 }
 

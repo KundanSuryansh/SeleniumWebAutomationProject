@@ -18,9 +18,11 @@ public class TestData {
 								   CORRECT_PASS="kundan17",
 								   INCORRECT_PASS="qwert",
 								   ERROR_MSG="Email or password you entered are not valid. Please, try again!";
+								
 	}
 	public class AccountPageData{
-		public static final String TITLE="Your Account";
+		public static final String TITLE="Your Account",
+								   NEW_NICK_NAME="Rock";
 	}
 	public class DemoPageData{
 		public static final String TITLE="Telerik Product Demos, Examples and Tutorials for all Telerik products";
@@ -39,7 +41,13 @@ public class TestData {
 								   LAST_NAME="suryansh",
 								   EMAIL="suryansh100.ks@gmail.com",
 								   COMPANY_NAME="student",
-								   PHONE="1234567890";
+								   PHONE="1234567890",
+								   ERR_MSG_VALUE="Company name is required";
+	}
+	public class DocsAndSupportData{
+		public static final String TITLE="Support and Learning | Telerik",
+								   Email="abcd@abcd.com",
+								   SUBSCRIBE_ACKNOWLEDGE="You successfully subscribed to Telerik Product Newsletter.";
 	}
 	
 }
